@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+   <link rel="icon" type="image/x-icon" href="kedma.jpg">
+  <meta charset="UTF-8">
+ <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+       <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <div  id="liveAlertPlaceholder"></div>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!--جيكويري-->
+  <script>
+  $(document).ready(function(){
+    $("#mon").click(function(){
+        document.body.style.backgroundColor="black";
+        $("#man").css("backgroundColor","	#009E60")
+        $("#man").css("color","#7CFC00")
+        $("#fff").css("color","#01DFD7")
+        $("#logo").attr("src", "lyl.jpg")
+        
+   $("#sun").click(function(){
+      document.body.style.backgroundColor="white";
+      $("#man").css("backgroundColor","yellow")
+        $("#man").css("color","black")
+        $("#fff").css("color","black")
+        $("#logo").attr("src","nhar.jpg")
+      });
+    })
+    $("#reload").click(function(){
+        window.location.reload();
+      })
+    $("#yes").click(function(){
+        $(".bbj").hide(function(){
+         alert(" شكراً جزيلاً على هذه الإجابة")
+         
+        })
+      
+    
+      
+    
+      })
+      
+      $("#no").click(function(){
+        $(".bbj").hide(function(){
+         hgg=prompt("لماذا ؟؟ اكتب مشكلتك")
+        })
+        })
+      $("#kadm").hide()
+      $("#btnmkadm").click(function(){
+        $("#kadm").slideToggle(1000)
+      })
+    })
+  </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Aref+Ruqaa+Ink:wght@400;700&display=swap" rel="stylesheet">
+<!--animation library-->
+<link href="https://unpkg.com/webkul-micron@1.1.6/dist/css/micron.min.css" type="text/css" rel="stylesheet">
+<script src="https://unpkg.com/webkul-micron@1.1.6/dist/script/micron.min.js" type="text/javascript"></script>
+<style>
+#btnmkadm{
+  width:80px;]
+}
+body a{
+  text-decoration:none;
+}
+.ked a{
+  color:#ffe564;
+}
+.ked{
+  background-color:#720000ae;
+}
+.app a{
+  color:#be6000;
+  }
+.app{
+  background-color:#d2ff11;
+}
+.kadm{
+  display: flex;
+}
+      #kadm {
+        left:2600;
+        width: auto;
+        height: 500px;
+        overflow-y: scroll;
+        background-color: #2206a3c2;
+        position: fixed;
+        left: 200px;
+        top: 100px;
+        z-index:1;
+        display:flex;
+        border-radius: 5%;
+      }
+      #kadm button{
+        padding: 10px;
+        margin: 10px;
+        overflow-y: scroll;
+        z-index:1;
+        width:130px;
+        height:20;
+        border-radius: 10%;
+        text-align:center;
+        background-color:#fff27dec;
+        display:flex;
+      }
+.why{
+  color:red;
+}
+#fff{
+  font-size:40px;
+  text-shadow: 3px 4px 5px 	#FF4433;
+}
+#man{
+  background-color:yellow;
+  
+}
+.telegram{
+  background-color:#87CEEB;
+}
+.watchapp{
+  background-color : lightgreen;
+}
+.youtube{
+  background-color : red;
+}
+.facebook{
+  background-color:#0096FF;
+}
+h2{
+  text-shadow: 3px 4px 5px 	#8A9A5B;
+}
+h3{
+  font-family:"Amiri", serif;
+  text-align:center;
+  
+}
+.button{
+  background-color: #DAF7A6;
+  width:50px;
+  height:50px;
+  align:left;
+  
+}
+.ff{
+  position: absolute;
+
+  top: 185px;
+  left: 50px;
+  text-align: left;
+
+  color: red;
+
+  font-size: 20px;
+
+  font-family: "Aref Ruqaa Ink", serif;
+  
+
+}
+h1{
+  text-shadow: 2px 2px 5px #96DED1;
+    text-align: center;
+    background-color: white;
+}
+.gg{
+
+  position: absolute;
+
+  top: 200px;
+
+  text-align: left;
+
+  color: red;
+
+  font-size: 30px;
+
+  height:130px;
+
+  width:130px;
+
+  font-family: "Aref Ruqaa Ink", serif;
+
+}
+
+</style>
+</style>
+<center>
+  
+<button class="button"id="mon">🌚</button>
+<button class="button" id="sun">☀️</button>
+
+<button  class="button"id="reload">🔃</button>
+<button id="mansh"class="button"><a href="#man">📄</a></button>
+
+<button data-micron="squeeze" class="button" class="btnmido" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrollingo">القائمة
+</button>
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h1 class="offcanvas-title" id="offcanvasScrollingLabel"><center>
+    
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+<h2>خدماتنا</h2>
+<button class="facebook"><a class="link-dark"  href="https://www.facebook.com/profile.php?id=61560840105785&mibextid=ZbWKwL">فيسبوك</a></button>
+<button class="youtube"><a href="https://youtube.com/@midobodyislamic?si=fdrMKCphqmBow3uR" class="link-light">يوتيوب</a></button>
+<button class="watchapp"><a href="https://chat.whatsapp.com/K7T7OgUmOl49kh7Pjg607f">واتساب</a></button>
+<button class="telegram"><a href="https://t.me/midobodyislamic" class="link-success">تيليجرام</a></button>
+<button class="ked"><a href="https://www.mediafire.com/file/t77tdavzrr13hhq/khedma.apk/file">تحميل تطبيق وإنك لتهدي إلى صراط مستقيم</a></button>
+<button class="app"><a href="https://www.mediafire.com/file/oqlu600jfgt15k3/quran.apk/file">تحميل تطبيق القرآن الكريم</a></button>
+<hr>
+<h2>حقوق الطبع والنشر</h2>
+  <div  class="container-fluid mt-3">
+      <div  class="container-fluid" >
+    <div class="row">
+      <div class="col-sm-3 col-md-6 bg-primary text-white" id="row">
+حقوق الطبع والنشر محفوظه لصاحب الصفحة©
+<br>يحظر تنزيل اي منشور في صفحة اخرى الا بعد استئذان صاحبها من البريد الالكتروني او رقم الهاتف
+01029238455
+midoandbodyemish@gmail.com</div>
+<div class="bbj">
+<h4>هل أعجبك هذا الموقع 
+</h4><center>
+<button  id="yes"class="button">نعم</button>
+<button id="no" class="button">لا</button><br><br>
+<button onclick="like();" class="button">قيم الموقع</button>
+</div></div>
+</div></div>
+</div><button class="button" id="btnmkadm">🏠</button>
+</center>
+  
+</center>
+
+</center>
+
+
+<hr>
+
+</head>
+
+
+<body>
+  <span class="kadm">
+  <nav id="kadm">
+    <ul>
+      <button data-micron="bounce" onclick="location.href='speekings.html';">سلاسل احاديث للنبي</button>
+   <button onclick="location.href='syana.html';">القرآن الكريم ببعض اللغات والقراءات</button>
+   <button onclick="location.href='syana.html';">احاديث نبوية</button>
+   <button onclick="location.href='azkar.html';">أذكار المؤمن</button>
+   <button onclick="location.href='azkaroshw.html';">أذكار عشوائية</button>
+   <button onclick="location.href='ask.html';" data-micron="groove">اسأل سؤال</button>
+   <button data-micron="pop" onclick="location.href='ques.html';">اسئلة اسلامية</button>
+   <button data-micron='blink' onclick="location.href='spha.html';">مسبحة الكترونية</button>
+   <button onclick="location.href='salah.html';">مواقيت الصلاة</button>
+   <button onclick="location.href='mozn.html';">المؤذن</button>
+   <button onclick="location.href='stories.html';">المكتبة الإسلامية</button>
+   <button onclick="location.href='mohamed.html';">الصلاة على النبي ﷺ </button>
+   <button onclick="location.href='qpla.html';">القبلة</button>
+   <button onclick="location.href='syana.html';">بث مباشر</button>
+  
+   <button data-micron="shake" onclick="location.href='aboutus.html';">من نحن</button>
+    </ul>
+
+  </nav>
+  </span>
+  <div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+   <!--جافا-->
+   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      tippy("#reload",{
+       content:"تحديث الصفحة",
+     });
+     tippy("#btnmkadm",{
+       content:"أقسام الموقع"
+     });
+     tippy("#mansh",{
+       content:"المنشورات"
+     });
+     tippy("#sun",{
+       content:"الوضع النهاري"
+     });
+     tippy("#mon",{
+       content:"الوضع الليلي"
+     })
+function like(){
+  Swal.fire({
+  input: "textarea",
+  inputLabel: "التقييم",
+  icon:"question",
+  ClassName:"why",
+  denyButtonText:"إلغاء",
+  inputPlaceholder: "أكتب تقييمك",
+  inputAttributes: {
+    "aria-label": "Type your message here"
+  },
+  
+  inputValidator: (value) => {
+    if (!value) {
+      return "يجب كتابة تقييمك!";
+    }
+  },
+  showCancelButton: false
+});
+}
+Swal.fire({
+  
+  title: "مرحباً بكم في خدمة وإنك لتهدي إلى صراط مستقيم",
+  text:"",
+  imageUrl:"kedma.jpg",
+  imageAlt: "صورة الخدمة",
+  showDenyButton: true,
+  showCancelButton: false,
+  confirmButtonText: "موافق",
+  denyButtonText: `لا أوافق`,
+  footer:"<a href='https://www.mediafire.com/file/t77tdavzrr13hhq/khedma.apk/file'>تحميل تطبيق وإنك لتهدي إلى صراط مستقيم</a>",
+}).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+   Swal.fire({
+    title:"الموافقة على الشروط",
+  text:"يجب أن تعلم أن تعلم أن كل المعلومات الواردة في الموقع صحيحة , يجب أن أن تنشر هذا الموقع لتعم الفائدة على الناس , يجب أن أن تستفيد من المعلومات بقلبك وليس أن تقرأها فقط , يجبأن تعمل بهذه المعلومات ",
+ icon:"success",
+  input: "checkbox",
+  inputValue: 0,
+  inputPlaceholder: `
+   أنا أوافق على الشروط 
+  `,
+  confirmButtonText: `
+    Continue&nbsp;<i class="fa fa-arrow-right"></i>
+  `,
+  inputValidator: (result) => {
+    return !result && "يجب أن توافق على الشروط";
+  }
+});
+if (accept) {
+  Swal.fire("You agreed with T&C :)");
+}
+  }else if (result.isDenied) {
+     Swal.fire({
+  title: "إختر سبب من الأسباب",
+  
+  icon:"error",
+  input: "select",
+  inputOptions: {
+  الأسباب  :{
+      apples: "الموقع يصدر معلومات خاطئة",
+      bananas: "أنا لا أحب هذا الموقع",
+      grapes: "الموقع يسرق المعلومات",
+    },
+    
+  },
+   inputPlaceholder: "إختر سبب",
+  showCancelButton: true,
+ // inputValidator: (value) => {
+    //return new Promise((resolve) => {
+     // if (value === "oranges") {
+       // resolve();
+     // } else {
+       /// resolve("You need to select oranges :)");
+    inputValidator: (value) => {
+     if (!value) {
+      return "يجب إختيار شئ";
+    }
+      }
+   
+      });
+  };
+  
+});
+    </script>
+  <script>
+    function quran(){
+      alert('هذا القسم غير متاح الآن')
+    }
+  
+    function copy(text){
+      navigator.clipboard.writeText(text)
+    }
+  </script>
+    <center>
+    
+    <img id="logo" src="nhar.jpg" width="360px" height="300px" alt="صورة البداية ">
+   <center>
+     <marquee scrollamount="2" class="ff"bgcolor="#FCF55F" width="50" direction="up" behavior="alternate" height="140">وإنك لتهدي إلى صراط مستقيم</marquee>
+   <marquee scrollamount="4" class="gg" direction="up">السلام عليكم ورحمة
+ الله وبركاته 
+مرحباً بكم في خدماتنا 
+الخاصة بالمعلومات الإسلامية
+اتمنى إعجابكم وشكراً </marquee>
+  </center>
+  
+  </center>
+  <hr>
+  <img src="kedma.jpg" height="300"width="360"alt="صورة الخدمة">
+  </div>
+  <h1 id="ggk" class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">وإنك لتهدي إلى صراط مستقيم</h1>
+  <!--المنشورات-->
+  <center><p id="fff">المنشورات</p></center>
+  <button onclick="location.href='search.html';" data-micron="swing" class="button">🔍</button>
+  <div id="man" class="top">
+  <button onclick="copy('ليس الزهادة في الدنيا بتحريم الحلال .. ولا بإضاعة المال .. ولكن الزهادة في الدنيا أن تكون بما في يد الله أوثق منك بما في يديك .. وأن يكون حالك في المصيبة وحالك إذا لم تصب بها سواء .. وأن يكون مادحك وذامك في الحق سواء ، الزهد لابن أبي الدنيا');">نسخ</button><h3><b>ليس الزهادة في الدنيا بتحريم الحلال .. ولا بإضاعة المال .. ولكن الزهادة في الدنيا أن تكون بما في يد الله أوثق منك بما في يديك .. وأن يكون حالك في المصيبة وحالك إذا لم تصب بها سواء .. وأن يكون مادحك وذامك في الحق سواء
+  <br><i>الزهد لابن أبي الدنيا</i></b></h3>ٌ<hr>
+
+  <button onclick="copy('ما تستقِلُّ الشمسُ فيبْقَى شيءٌ مِنَ خلْقِ اللهِ إلَّا سبَّحَ اللهَ بحمدِهِ إلَّا ما كانَ مِنَ الشياطينِ ، وأغبياءِ بني آدَمَ ومعنى ما تستقل الشمس أي ما ترتفع الشمس وتتعالى فكل شيء إنما يسبح الله إلا الشياطين وأغبياء بني آدم فلا تكن منهم');">نسخ</button>
+<h3><b>ما تستقِلُّ الشمسُ فيبْقَى شيءٌ مِنَ خلْقِ اللهِ إلَّا سبَّحَ اللهَ بحمدِهِ إلَّا ما كانَ مِنَ الشياطينِ ، وأغبياءِ بني آدَمَ  ومعنى ما تستقل الشمس أي ما ترتفع الشمس وتتعالى  فكل شيء إنما يسبح الله إلا الشياطين وأغبياء بني آدم   فلا تكن منهم </b></h3
+><hr>
+<button onclick="copy('قال أبو الدرداء : الدّنيا ملعونة .. ملعون ما فيها إلا ذكر الله عز وجل .. وما أدى إليه ، الزهد لأبن أبي الدنيا');">نسخ</button>
+  <h3><b>قال أبو الدرداء : الدّنيا ملعونة ..  ملعون ما فيها إلا ذكر الله عز وجل .. وما أدى إليه<br><i>الزهد لأبن أبي الدنيا </i></b></h3
+  ><hr>
+  <button onclick="copy('قال الحسن : من عرف ربه أحبه .. ومن أبصر الدنيا زهد فيها .. والمؤمن لا يلهو حتى يغفل .. وإذا تفكر حزن , الهم والحزن لإبن أبي الدنيا');">نسخ</button>
+  <h3><b>قال الحسن : من عرف ربه أحبه .. ومن أبصر الدنيا زهد فيها .. والمؤمن لا يلهو حتى يغفل .. وإذا تفكر حزن<i><br>الهم والحزن لإبن أبي الدنيا</i></b></h3><hr>
+  <button onclick="copy('قال أبو هريرة : إن العبد ليذنب الذنب .. فإذا رآه الله قد أحزنه ذلك غفره له من غير أن يحدث صلاة ولا صدقة ، الهم والحزن لإبن أبي الدنيا');">نسخ</button>
+<h3><b>قال أبو هريرة : إن العبد ليذنب الذنب .. فإذا رآه الله قد أحزنه ذلك غفره له من غير أن يحدث صلاة ولا صدقة<i><br>الهم والحزن لإبن أبي الدنيا</i></b></h3><hr>
+<button onclick="copy('قال الفضيل بن عياض : ترى أنَّك إذا قضيتَ حاجةً أنَّك قد صنعتَ إليه معروفًا؟ هو الذي صنع إليك معروفًا حتَّى خصك بها ، مكارم الاخلاق للخرائطي')">نسخ</button>
+<h3><b>قال الفضيل بن عياض : ترى أنَّك إذا قضيتَ حاجةً أنَّك قد صنعتَ إليه معروفًا؟ هو الذي صنع إليك معروفًا حتَّى خصك بها<i><br>مكارم الاخلاق للخرائطي</i></b></h3><hr>
+<button onclick="copy('كان عبد الله بن عمر يقول : بُنَيَّ .. إنَّ البِرَّ شيءٌ هيِّن .. وجهٌ طليقٌ وكلامٌ لَيِّن ، مكارم الاخلاق للخرائطي')">نسخ</button>
+<h3><b>كان عبد الله بن عمر يقول : بُنَيَّ .. إنَّ البِرَّ شيءٌ هيِّن .. وجهٌ طليقٌ وكلامٌ لَيِّن
+<i><br>مكارم الاخلاق للخرائطي</i></b></h3><hr>
+<button onclick="copy('كان داود عليه السلام يقول انظر ما تكره أن يُذكَر منك في نادي القوم فلا تفعله إذا خلوتَ ،مكارم الأخلاق للخرائطي');">نسخ</button>
+<h3><b>كان داود عليه السلام يقول : انظر ما تكره أن يُذكَر منك في نادي القوم فلا تفعله إذا خلوتَ<i><br> مكارم الأخلاق للخرائطي</i></b></h3><hr>
+  
+  </div>
+ 
+</body>
+
+</html>
