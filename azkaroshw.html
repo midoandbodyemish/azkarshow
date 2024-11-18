@@ -102,7 +102,7 @@
         navigator.serviceWorker.ready.then(registration => {
           registration.showNotification('ذكر جديد', {
             body: chosenAzkar,
-            icon: 'kedma.jpg' // أضف أيقونة للإشعار إن أردت
+            icon: 'icon.png' // أضف أيقونة للإشعار إن أردت
           });
         });
       }
@@ -116,49 +116,59 @@
     }
 
     startButton.addEventListener('click', () => {
-      // تسجيل الـ Service Worker
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js').then(() => {
-          console.log('Service Worker Registered');
-          startChangingAzkar(); // بدء تغيير الأذكار بعد التسجيل
-        }).catch(error => {
-          console.error('Service Worker Registration Failed:', error);
+      // طلب إذن الإشعارات
+      if ('Notification' in window) {
+        Notification.requestPermission().then(permission => {
+          if (permission === 'granted') {
+            if ('serviceWorker' in navigator) {
+              // تسجيل الـ Service Worker
+              navigator.serviceWorker.register('service-worker.js').then(() => {
+                console.log('Service Worker Registered');
+                startChangingAzkar(); // بدء تغيير الأذكار بعد التسجيل
+              }).catch(error => {
+                console.error('Service Worker Registration Failed:', error);
+              });
+            }
+          } else {
+            alert('إشعارات الذكر غير مفعلة. يرجى السماح بالإشعارات.');
+          }
         });
-      } else {
-        alert('متصفحك لا يدعم الـ Service Workers.');
       }
     });
 
-    // تسجيل الـ Service Worker عند تحميل الصفحة
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('Service Worker registered successfully.'))
-        .catch(error => console.error('Service Worker registration failed:', error));
-    }
-
-    self.addEventListener('install', event => {
-      self.skipWaiting(); // تخطي مرحلة الانتظار
-    });
-
-    self.addEventListener('activate', event => {
-      // تنظيف الـ Service Worker القديم إن وجد
+    // التسجيل في نفس ملف الـ HTML
+    navigator.serviceWorker.addEventListener('install', event => {
       event.waitUntil(
-        caches.keys().then(cacheNames => {
-          return Promise.all(
-            cacheNames.map(cache => {
-              return caches.delete(cache);
-            })
-          );
+        caches.open('v1').then(cache => {
+          return cache.addAll([
+            './',
+            './azkaroshw.html',
+            './وانك لتهدى إلى صراط مستقيم.mp3',
+            './kedma.jpg'
+          ]);
         })
       );
-      self.clients.claim();
     });
 
-    self.addEventListener('fetch', event => {
-      // تخزين الموارد في الـ Cache
+    navigator.serviceWorker.addEventListener('fetch', event => {
       event.respondWith(
         caches.match(event.request).then(response => {
           return response || fetch(event.request);
+        })
+      );
+    });
+
+    navigator.serviceWorker.addEventListener('activate', event => {
+      const cacheWhitelist = ['v1'];
+      event.waitUntil(
+        caches.keys().then(cacheNames => {
+          return Promise.all(
+            cacheNames.map(cacheName => {
+              if (!cacheWhitelist.includes(cacheName)) {
+                return caches.delete(cacheName);
+              }
+            })
+          );
         })
       );
     });
